@@ -33,12 +33,12 @@ namespace Cloudmersive.APIClient.NETCore.ConfigurationAPI.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="HttpRawTextParameter" /> class.
         /// </summary>
-        /// <param name="ParameterValue">Text value of the parameter.</param>
-        /// <param name="UseOutputFromPreviousTask">Optional; use the output from a previous task as the input to this parameter.  Set to null (default) to ignore..</param>
-        public HttpRawTextParameter(string ParameterValue = default(string), TaskOutputReference UseOutputFromPreviousTask = default(TaskOutputReference))
+        /// <param name="parameterValue">Text value of the parameter.</param>
+        /// <param name="useOutputFromPreviousTask">Optional; use the output from a previous task as the input to this parameter.  Set to null (default) to ignore..</param>
+        public HttpRawTextParameter(string parameterValue = default(string), TaskOutputReference useOutputFromPreviousTask = default(TaskOutputReference))
         {
-            this.ParameterValue = ParameterValue;
-            this.UseOutputFromPreviousTask = UseOutputFromPreviousTask;
+            this.ParameterValue = parameterValue;
+            this.UseOutputFromPreviousTask = useOutputFromPreviousTask;
         }
         
         /// <summary>
@@ -73,7 +73,7 @@ namespace Cloudmersive.APIClient.NETCore.ConfigurationAPI.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

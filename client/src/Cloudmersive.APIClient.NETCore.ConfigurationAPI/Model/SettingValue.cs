@@ -33,24 +33,24 @@ namespace Cloudmersive.APIClient.NETCore.ConfigurationAPI.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="SettingValue" /> class.
         /// </summary>
-        /// <param name="ConfigSettingValueID">The ID of the setting value.</param>
-        /// <param name="ConfigSettingDefinitionID">The ID of the definition of the setting.</param>
-        /// <param name="ConfigSettingValue">The value of the setting.</param>
-        /// <param name="ConfigSettingLastModified">The last modified date of the setting.</param>
-        /// <param name="ConfigSettingName">Name of the setting.</param>
-        /// <param name="ConfigSettingDescription">Description of the setting.</param>
-        /// <param name="ConfigSettingTags">Setting tags.</param>
-        /// <param name="ConfigSettingType">Possible values are: STRING, JSON.</param>
-        public SettingValue(string ConfigSettingValueID = default(string), string ConfigSettingDefinitionID = default(string), Object ConfigSettingValue = default(Object), DateTime? ConfigSettingLastModified = default(DateTime?), string ConfigSettingName = default(string), string ConfigSettingDescription = default(string), string ConfigSettingTags = default(string), string ConfigSettingType = default(string))
+        /// <param name="configSettingValueID">The ID of the setting value.</param>
+        /// <param name="configSettingDefinitionID">The ID of the definition of the setting.</param>
+        /// <param name="configSettingValue">The value of the setting.</param>
+        /// <param name="configSettingLastModified">The last modified date of the setting.</param>
+        /// <param name="configSettingName">Name of the setting.</param>
+        /// <param name="configSettingDescription">Description of the setting.</param>
+        /// <param name="configSettingTags">Setting tags.</param>
+        /// <param name="configSettingType">Possible values are: STRING, JSON.</param>
+        public SettingValue(string configSettingValueID = default(string), string configSettingDefinitionID = default(string), Object configSettingValue = default(Object), DateTime? configSettingLastModified = default(DateTime?), string configSettingName = default(string), string configSettingDescription = default(string), string configSettingTags = default(string), string configSettingType = default(string))
         {
-            this.ConfigSettingValueID = ConfigSettingValueID;
-            this.ConfigSettingDefinitionID = ConfigSettingDefinitionID;
-            this.ConfigSettingValue = ConfigSettingValue;
-            this.ConfigSettingLastModified = ConfigSettingLastModified;
-            this.ConfigSettingName = ConfigSettingName;
-            this.ConfigSettingDescription = ConfigSettingDescription;
-            this.ConfigSettingTags = ConfigSettingTags;
-            this.ConfigSettingType = ConfigSettingType;
+            this.ConfigSettingValueID = configSettingValueID;
+            this.ConfigSettingDefinitionID = configSettingDefinitionID;
+            this.ConfigSettingValue = configSettingValue;
+            this.ConfigSettingLastModified = configSettingLastModified;
+            this.ConfigSettingName = configSettingName;
+            this.ConfigSettingDescription = configSettingDescription;
+            this.ConfigSettingTags = configSettingTags;
+            this.ConfigSettingType = configSettingType;
         }
         
         /// <summary>
@@ -133,7 +133,7 @@ namespace Cloudmersive.APIClient.NETCore.ConfigurationAPI.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

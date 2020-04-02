@@ -33,14 +33,14 @@ namespace Cloudmersive.APIClient.NETCore.ConfigurationAPI.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="HttpOrchestrationHeader" /> class.
         /// </summary>
-        /// <param name="HeaderName">Name of the HTTP header, e.g. \&quot;Content-Type\&quot;.</param>
-        /// <param name="HeaderValue">Value of the HTTP header.</param>
-        /// <param name="UseOutputFromPreviousTask">Optional; use the output from a previous task as the input to this parameter.  Set to null (default) to ignore..</param>
-        public HttpOrchestrationHeader(string HeaderName = default(string), string HeaderValue = default(string), TaskOutputReference UseOutputFromPreviousTask = default(TaskOutputReference))
+        /// <param name="headerName">Name of the HTTP header, e.g. \&quot;Content-Type\&quot;.</param>
+        /// <param name="headerValue">Value of the HTTP header.</param>
+        /// <param name="useOutputFromPreviousTask">Optional; use the output from a previous task as the input to this parameter.  Set to null (default) to ignore..</param>
+        public HttpOrchestrationHeader(string headerName = default(string), string headerValue = default(string), TaskOutputReference useOutputFromPreviousTask = default(TaskOutputReference))
         {
-            this.HeaderName = HeaderName;
-            this.HeaderValue = HeaderValue;
-            this.UseOutputFromPreviousTask = UseOutputFromPreviousTask;
+            this.HeaderName = headerName;
+            this.HeaderValue = headerValue;
+            this.UseOutputFromPreviousTask = useOutputFromPreviousTask;
         }
         
         /// <summary>
@@ -83,7 +83,7 @@ namespace Cloudmersive.APIClient.NETCore.ConfigurationAPI.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

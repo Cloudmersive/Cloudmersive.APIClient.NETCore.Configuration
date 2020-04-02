@@ -33,14 +33,14 @@ namespace Cloudmersive.APIClient.NETCore.ConfigurationAPI.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="HttpGetParameter" /> class.
         /// </summary>
-        /// <param name="ParameterName">Name of the parameter.</param>
-        /// <param name="ParameterValue">Value of the parameter.</param>
-        /// <param name="UseOutputFromPreviousTask">Optional; use the output from a previous task as the input to this parameter.  Set to null (default) to ignore..</param>
-        public HttpGetParameter(string ParameterName = default(string), string ParameterValue = default(string), TaskOutputReference UseOutputFromPreviousTask = default(TaskOutputReference))
+        /// <param name="parameterName">Name of the parameter.</param>
+        /// <param name="parameterValue">Value of the parameter.</param>
+        /// <param name="useOutputFromPreviousTask">Optional; use the output from a previous task as the input to this parameter.  Set to null (default) to ignore..</param>
+        public HttpGetParameter(string parameterName = default(string), string parameterValue = default(string), TaskOutputReference useOutputFromPreviousTask = default(TaskOutputReference))
         {
-            this.ParameterName = ParameterName;
-            this.ParameterValue = ParameterValue;
-            this.UseOutputFromPreviousTask = UseOutputFromPreviousTask;
+            this.ParameterName = parameterName;
+            this.ParameterValue = parameterValue;
+            this.UseOutputFromPreviousTask = useOutputFromPreviousTask;
         }
         
         /// <summary>
@@ -83,7 +83,7 @@ namespace Cloudmersive.APIClient.NETCore.ConfigurationAPI.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

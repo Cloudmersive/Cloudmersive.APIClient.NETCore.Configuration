@@ -33,26 +33,26 @@ namespace Cloudmersive.APIClient.NETCore.ConfigurationAPI.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="HttpOrchestrationTask" /> class.
         /// </summary>
-        /// <param name="TaskName">An identifier for this task name, e.g. CreateCustomer or ScanForVirus; allows you to refer to this task from other tasks; if not supplied, it will default to a 0-based integer index of the task.</param>
-        /// <param name="HttpMethod">HTTP Method, e.g. GET, PUT, POST, etc..</param>
-        /// <param name="URL">HTTP URL to orchestrate.</param>
-        /// <param name="HttpHeaders">Optional; HTTP headers to apply to the request.</param>
-        /// <param name="QueryParameters">Optional; query parameters, these query parameters will be incorporated into the URL.</param>
-        /// <param name="FormDataParameters">Optional; FormData parameters, these parameters will be stored in the body in a multi-part encoding.</param>
-        /// <param name="WwwFormUrlEncodedParameters">Optional; x-www-form-urlencoded paramereters, these parameters will be stored in the body as an application/x-www-form-urlencoded encoding.</param>
-        /// <param name="RawTextBody">Optional; sets the body of the request as raw text, cannot be used with other parameter types in the same request.</param>
-        /// <param name="RawBinaryBody">Optional; set the body of the request as binary, cannot be used with other parameter types in the same request.</param>
-        public HttpOrchestrationTask(string TaskName = default(string), string HttpMethod = default(string), string URL = default(string), List<HttpOrchestrationHeader> HttpHeaders = default(List<HttpOrchestrationHeader>), List<HttpGetParameter> QueryParameters = default(List<HttpGetParameter>), List<HttpFormDataParameter> FormDataParameters = default(List<HttpFormDataParameter>), List<HttpWwwFormUrlEncodedParameter> WwwFormUrlEncodedParameters = default(List<HttpWwwFormUrlEncodedParameter>), HttpRawTextParameter RawTextBody = default(HttpRawTextParameter), HttpRawBinaryParameter RawBinaryBody = default(HttpRawBinaryParameter))
+        /// <param name="taskName">An identifier for this task name, e.g. CreateCustomer or ScanForVirus; allows you to refer to this task from other tasks; if not supplied, it will default to a 0-based integer index of the task.</param>
+        /// <param name="httpMethod">HTTP Method, e.g. GET, PUT, POST, etc..</param>
+        /// <param name="uRL">HTTP URL to orchestrate.</param>
+        /// <param name="httpHeaders">Optional; HTTP headers to apply to the request.</param>
+        /// <param name="queryParameters">Optional; query parameters, these query parameters will be incorporated into the URL.</param>
+        /// <param name="formDataParameters">Optional; FormData parameters, these parameters will be stored in the body in a multi-part encoding.</param>
+        /// <param name="wwwFormUrlEncodedParameters">Optional; x-www-form-urlencoded paramereters, these parameters will be stored in the body as an application/x-www-form-urlencoded encoding.</param>
+        /// <param name="rawTextBody">Optional; sets the body of the request as raw text, cannot be used with other parameter types in the same request.</param>
+        /// <param name="rawBinaryBody">Optional; set the body of the request as binary, cannot be used with other parameter types in the same request.</param>
+        public HttpOrchestrationTask(string taskName = default(string), string httpMethod = default(string), string uRL = default(string), List<HttpOrchestrationHeader> httpHeaders = default(List<HttpOrchestrationHeader>), List<HttpGetParameter> queryParameters = default(List<HttpGetParameter>), List<HttpFormDataParameter> formDataParameters = default(List<HttpFormDataParameter>), List<HttpWwwFormUrlEncodedParameter> wwwFormUrlEncodedParameters = default(List<HttpWwwFormUrlEncodedParameter>), HttpRawTextParameter rawTextBody = default(HttpRawTextParameter), HttpRawBinaryParameter rawBinaryBody = default(HttpRawBinaryParameter))
         {
-            this.TaskName = TaskName;
-            this.HttpMethod = HttpMethod;
-            this.URL = URL;
-            this.HttpHeaders = HttpHeaders;
-            this.QueryParameters = QueryParameters;
-            this.FormDataParameters = FormDataParameters;
-            this.WwwFormUrlEncodedParameters = WwwFormUrlEncodedParameters;
-            this.RawTextBody = RawTextBody;
-            this.RawBinaryBody = RawBinaryBody;
+            this.TaskName = taskName;
+            this.HttpMethod = httpMethod;
+            this.URL = uRL;
+            this.HttpHeaders = httpHeaders;
+            this.QueryParameters = queryParameters;
+            this.FormDataParameters = formDataParameters;
+            this.WwwFormUrlEncodedParameters = wwwFormUrlEncodedParameters;
+            this.RawTextBody = rawTextBody;
+            this.RawBinaryBody = rawBinaryBody;
         }
         
         /// <summary>
@@ -143,7 +143,7 @@ namespace Cloudmersive.APIClient.NETCore.ConfigurationAPI.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

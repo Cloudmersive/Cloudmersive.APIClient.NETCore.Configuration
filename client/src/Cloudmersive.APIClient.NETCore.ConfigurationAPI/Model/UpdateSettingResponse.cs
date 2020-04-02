@@ -33,12 +33,12 @@ namespace Cloudmersive.APIClient.NETCore.ConfigurationAPI.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UpdateSettingResponse" /> class.
         /// </summary>
-        /// <param name="Successful">Successful.</param>
-        /// <param name="ErrorMessage">ErrorMessage.</param>
-        public UpdateSettingResponse(bool? Successful = default(bool?), string ErrorMessage = default(string))
+        /// <param name="successful">successful.</param>
+        /// <param name="errorMessage">errorMessage.</param>
+        public UpdateSettingResponse(bool? successful = default(bool?), string errorMessage = default(string))
         {
-            this.Successful = Successful;
-            this.ErrorMessage = ErrorMessage;
+            this.Successful = successful;
+            this.ErrorMessage = errorMessage;
         }
         
         /// <summary>
@@ -71,7 +71,7 @@ namespace Cloudmersive.APIClient.NETCore.ConfigurationAPI.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

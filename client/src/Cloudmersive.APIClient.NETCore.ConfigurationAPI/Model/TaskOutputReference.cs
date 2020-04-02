@@ -33,12 +33,12 @@ namespace Cloudmersive.APIClient.NETCore.ConfigurationAPI.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="TaskOutputReference" /> class.
         /// </summary>
-        /// <param name="TaskName">Name of the task to use the output from.</param>
-        /// <param name="TargetType">Type to convert the output from the referenced task to; possible values are string, binary.</param>
-        public TaskOutputReference(string TaskName = default(string), string TargetType = default(string))
+        /// <param name="taskName">Name of the task to use the output from.</param>
+        /// <param name="targetType">Type to convert the output from the referenced task to; possible values are string, binary.</param>
+        public TaskOutputReference(string taskName = default(string), string targetType = default(string))
         {
-            this.TaskName = TaskName;
-            this.TargetType = TargetType;
+            this.TaskName = taskName;
+            this.TargetType = targetType;
         }
         
         /// <summary>
@@ -73,7 +73,7 @@ namespace Cloudmersive.APIClient.NETCore.ConfigurationAPI.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

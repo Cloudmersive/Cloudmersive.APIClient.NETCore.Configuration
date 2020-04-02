@@ -33,16 +33,16 @@ namespace Cloudmersive.APIClient.NETCore.ConfigurationAPI.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="HttpFormDataParameter" /> class.
         /// </summary>
-        /// <param name="ParameterName">Name of the parameter.</param>
-        /// <param name="ParameterTextValue">Text value of the parameter; if set, do not set ParameterFileContents or UseOutputFromPreviousTask.</param>
-        /// <param name="ParameterFileContents">Binary contents of the parameter; if set, do not set ParameterTextValue or UseOutputFromPreviousTask.</param>
-        /// <param name="UseOutputFromPreviousTask">Optional; use the output from a previous task as the input to this parameter.  Set to null (default) to ignore..</param>
-        public HttpFormDataParameter(string ParameterName = default(string), string ParameterTextValue = default(string), byte[] ParameterFileContents = default(byte[]), TaskOutputReference UseOutputFromPreviousTask = default(TaskOutputReference))
+        /// <param name="parameterName">Name of the parameter.</param>
+        /// <param name="parameterTextValue">Text value of the parameter; if set, do not set ParameterFileContents or UseOutputFromPreviousTask.</param>
+        /// <param name="parameterFileContents">Binary contents of the parameter; if set, do not set ParameterTextValue or UseOutputFromPreviousTask.</param>
+        /// <param name="useOutputFromPreviousTask">Optional; use the output from a previous task as the input to this parameter.  Set to null (default) to ignore..</param>
+        public HttpFormDataParameter(string parameterName = default(string), string parameterTextValue = default(string), byte[] parameterFileContents = default(byte[]), TaskOutputReference useOutputFromPreviousTask = default(TaskOutputReference))
         {
-            this.ParameterName = ParameterName;
-            this.ParameterTextValue = ParameterTextValue;
-            this.ParameterFileContents = ParameterFileContents;
-            this.UseOutputFromPreviousTask = UseOutputFromPreviousTask;
+            this.ParameterName = parameterName;
+            this.ParameterTextValue = parameterTextValue;
+            this.ParameterFileContents = parameterFileContents;
+            this.UseOutputFromPreviousTask = useOutputFromPreviousTask;
         }
         
         /// <summary>
@@ -93,7 +93,7 @@ namespace Cloudmersive.APIClient.NETCore.ConfigurationAPI.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

@@ -33,12 +33,12 @@ namespace Cloudmersive.APIClient.NETCore.ConfigurationAPI.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ListSettingsRequest" /> class.
         /// </summary>
-        /// <param name="BucketID">BucketID of the bucket to enumerate the settings of; you can create a bucket by navigating to account.cloudmersive.com, clicking on Settings &amp;gt; API Configuration &amp;gt; Create Bucket.</param>
-        /// <param name="BucketSecretKey">SecretKey of the bucket enumerate the settings of; you can create a bucket by navigating to account.cloudmersive.com, clicking on Settings &amp;gt; API Configuration &amp;gt; Create Bucket.</param>
-        public ListSettingsRequest(string BucketID = default(string), string BucketSecretKey = default(string))
+        /// <param name="bucketID">BucketID of the bucket to enumerate the settings of; you can create a bucket by navigating to account.cloudmersive.com, clicking on Settings &amp;gt; API Configuration &amp;gt; Create Bucket.</param>
+        /// <param name="bucketSecretKey">SecretKey of the bucket enumerate the settings of; you can create a bucket by navigating to account.cloudmersive.com, clicking on Settings &amp;gt; API Configuration &amp;gt; Create Bucket.</param>
+        public ListSettingsRequest(string bucketID = default(string), string bucketSecretKey = default(string))
         {
-            this.BucketID = BucketID;
-            this.BucketSecretKey = BucketSecretKey;
+            this.BucketID = bucketID;
+            this.BucketSecretKey = bucketSecretKey;
         }
         
         /// <summary>
@@ -73,7 +73,7 @@ namespace Cloudmersive.APIClient.NETCore.ConfigurationAPI.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

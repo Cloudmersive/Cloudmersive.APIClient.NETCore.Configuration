@@ -33,10 +33,10 @@ namespace Cloudmersive.APIClient.NETCore.ConfigurationAPI.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ListSettingsResponse" /> class.
         /// </summary>
-        /// <param name="Settings">Settings in the bucket.</param>
-        public ListSettingsResponse(List<SettingValue> Settings = default(List<SettingValue>))
+        /// <param name="settings">Settings in the bucket.</param>
+        public ListSettingsResponse(List<SettingValue> settings = default(List<SettingValue>))
         {
-            this.Settings = Settings;
+            this.Settings = settings;
         }
         
         /// <summary>
@@ -63,7 +63,7 @@ namespace Cloudmersive.APIClient.NETCore.ConfigurationAPI.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

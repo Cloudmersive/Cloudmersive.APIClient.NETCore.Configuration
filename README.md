@@ -5,7 +5,7 @@ Config API lets you easily manage configuration at scale.
 This C# SDK is for the [Cloudmersive ConfigurationAPI API](https://www.cloudmersive.com/):
 
 - API version: v1
-- SDK version: 1.9.1
+- SDK version: 1.9.2
 - Build package: io.swagger.codegen.languages.CSharpClientCodegen
 
 <a name="frameworks-supported"></a>
@@ -19,7 +19,7 @@ This C# SDK is for the [Cloudmersive ConfigurationAPI API](https://www.cloudmers
 - [Json.NET](https://www.nuget.org/packages/Newtonsoft.Json/) - 7.0.0 or later
 - [JsonSubTypes](https://www.nuget.org/packages/JsonSubTypes/) - 1.2.0 or later
 
-The DLLs included in the package may not be the latest version. We recommend using [NuGet] (https://docs.nuget.org/consume/installing-nuget) to obtain the latest version of the packages:
+The DLLs included in the package may not be the latest version. We recommend using [NuGet](https://docs.nuget.org/consume/installing-nuget) to obtain the latest version of the packages:
 ```
 Install-Package RestSharp
 Install-Package Newtonsoft.Json

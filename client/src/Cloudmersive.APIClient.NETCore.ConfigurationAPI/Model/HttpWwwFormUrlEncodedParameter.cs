@@ -33,14 +33,14 @@ namespace Cloudmersive.APIClient.NETCore.ConfigurationAPI.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="HttpWwwFormUrlEncodedParameter" /> class.
         /// </summary>
-        /// <param name="KeyName">Key name of the parameter.</param>
-        /// <param name="KeyValue">Key value of the paramer (must be of type text); if set, do not use UseOutputFromPreviousTask.</param>
-        /// <param name="UseOutputFromPreviousTask">Optional; use the output from a previous task as the input to this parameter.  Set to null (default) to ignore..</param>
-        public HttpWwwFormUrlEncodedParameter(string KeyName = default(string), string KeyValue = default(string), TaskOutputReference UseOutputFromPreviousTask = default(TaskOutputReference))
+        /// <param name="keyName">Key name of the parameter.</param>
+        /// <param name="keyValue">Key value of the paramer (must be of type text); if set, do not use UseOutputFromPreviousTask.</param>
+        /// <param name="useOutputFromPreviousTask">Optional; use the output from a previous task as the input to this parameter.  Set to null (default) to ignore..</param>
+        public HttpWwwFormUrlEncodedParameter(string keyName = default(string), string keyValue = default(string), TaskOutputReference useOutputFromPreviousTask = default(TaskOutputReference))
         {
-            this.KeyName = KeyName;
-            this.KeyValue = KeyValue;
-            this.UseOutputFromPreviousTask = UseOutputFromPreviousTask;
+            this.KeyName = keyName;
+            this.KeyValue = keyValue;
+            this.UseOutputFromPreviousTask = useOutputFromPreviousTask;
         }
         
         /// <summary>
@@ -83,7 +83,7 @@ namespace Cloudmersive.APIClient.NETCore.ConfigurationAPI.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

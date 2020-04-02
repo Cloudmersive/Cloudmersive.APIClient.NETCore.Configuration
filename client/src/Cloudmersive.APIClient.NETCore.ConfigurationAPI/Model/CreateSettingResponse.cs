@@ -33,16 +33,16 @@ namespace Cloudmersive.APIClient.NETCore.ConfigurationAPI.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateSettingResponse" /> class.
         /// </summary>
-        /// <param name="Successful">True if the operation was successful, false otherwise.</param>
-        /// <param name="SettingDefinitionID">SettingDefinitionID of the setting created.</param>
-        /// <param name="SettingValueID">SettingValueID of the value of the setting.</param>
-        /// <param name="ErrorMessage">Error message, if any, when the operation was not successful.</param>
-        public CreateSettingResponse(bool? Successful = default(bool?), string SettingDefinitionID = default(string), string SettingValueID = default(string), string ErrorMessage = default(string))
+        /// <param name="successful">True if the operation was successful, false otherwise.</param>
+        /// <param name="settingDefinitionID">SettingDefinitionID of the setting created.</param>
+        /// <param name="settingValueID">SettingValueID of the value of the setting.</param>
+        /// <param name="errorMessage">Error message, if any, when the operation was not successful.</param>
+        public CreateSettingResponse(bool? successful = default(bool?), string settingDefinitionID = default(string), string settingValueID = default(string), string errorMessage = default(string))
         {
-            this.Successful = Successful;
-            this.SettingDefinitionID = SettingDefinitionID;
-            this.SettingValueID = SettingValueID;
-            this.ErrorMessage = ErrorMessage;
+            this.Successful = successful;
+            this.SettingDefinitionID = settingDefinitionID;
+            this.SettingValueID = settingValueID;
+            this.ErrorMessage = errorMessage;
         }
         
         /// <summary>
@@ -93,7 +93,7 @@ namespace Cloudmersive.APIClient.NETCore.ConfigurationAPI.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

@@ -33,22 +33,22 @@ namespace Cloudmersive.APIClient.NETCore.ConfigurationAPI.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateSettingRequest" /> class.
         /// </summary>
-        /// <param name="BucketID">BucketID of the bucket to place the setting in; you can create a bucket by navigating to account.cloudmersive.com, clicking on Settings &amp;gt; API Configuration &amp;gt; Create Bucket.</param>
-        /// <param name="BucketSecretKey">SecretKey of the bucket to place the setting in; you can create a bucket by navigating to account.cloudmersive.com, clicking on Settings &amp;gt; API Configuration &amp;gt; Create Bucket.</param>
-        /// <param name="SettingName">Name of the setting to create.</param>
-        /// <param name="SettingType">Type of setting to create; possible values are STRING, JSON.</param>
-        /// <param name="SettingValue">Initial value of the setting.</param>
-        /// <param name="SettingDescription">Description of the setting.</param>
-        /// <param name="SettingTags">Tags to apply to the setting.</param>
-        public CreateSettingRequest(string BucketID = default(string), string BucketSecretKey = default(string), string SettingName = default(string), string SettingType = default(string), Object SettingValue = default(Object), string SettingDescription = default(string), string SettingTags = default(string))
+        /// <param name="bucketID">BucketID of the bucket to place the setting in; you can create a bucket by navigating to account.cloudmersive.com, clicking on Settings &amp;gt; API Configuration &amp;gt; Create Bucket.</param>
+        /// <param name="bucketSecretKey">SecretKey of the bucket to place the setting in; you can create a bucket by navigating to account.cloudmersive.com, clicking on Settings &amp;gt; API Configuration &amp;gt; Create Bucket.</param>
+        /// <param name="settingName">Name of the setting to create.</param>
+        /// <param name="settingType">Type of setting to create; possible values are STRING, JSON.</param>
+        /// <param name="settingValue">Initial value of the setting.</param>
+        /// <param name="settingDescription">Description of the setting.</param>
+        /// <param name="settingTags">Tags to apply to the setting.</param>
+        public CreateSettingRequest(string bucketID = default(string), string bucketSecretKey = default(string), string settingName = default(string), string settingType = default(string), Object settingValue = default(Object), string settingDescription = default(string), string settingTags = default(string))
         {
-            this.BucketID = BucketID;
-            this.BucketSecretKey = BucketSecretKey;
-            this.SettingName = SettingName;
-            this.SettingType = SettingType;
-            this.SettingValue = SettingValue;
-            this.SettingDescription = SettingDescription;
-            this.SettingTags = SettingTags;
+            this.BucketID = bucketID;
+            this.BucketSecretKey = bucketSecretKey;
+            this.SettingName = settingName;
+            this.SettingType = settingType;
+            this.SettingValue = settingValue;
+            this.SettingDescription = settingDescription;
+            this.SettingTags = settingTags;
         }
         
         /// <summary>
@@ -123,7 +123,7 @@ namespace Cloudmersive.APIClient.NETCore.ConfigurationAPI.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

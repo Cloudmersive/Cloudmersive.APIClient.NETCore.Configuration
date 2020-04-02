@@ -33,16 +33,16 @@ namespace Cloudmersive.APIClient.NETCore.ConfigurationAPI.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="HttpOrchestrationResponse" /> class.
         /// </summary>
-        /// <param name="Successful">True if the operation was successful, false otherwise.</param>
-        /// <param name="TasksCompleted">Count of the number of tasks that were completed.</param>
-        /// <param name="OutputStringType">Result output in string format.</param>
-        /// <param name="OutputBinaryType">Result output in binary format.</param>
-        public HttpOrchestrationResponse(bool? Successful = default(bool?), int? TasksCompleted = default(int?), string OutputStringType = default(string), byte[] OutputBinaryType = default(byte[]))
+        /// <param name="successful">True if the operation was successful, false otherwise.</param>
+        /// <param name="tasksCompleted">Count of the number of tasks that were completed.</param>
+        /// <param name="outputStringType">Result output in string format.</param>
+        /// <param name="outputBinaryType">Result output in binary format.</param>
+        public HttpOrchestrationResponse(bool? successful = default(bool?), int? tasksCompleted = default(int?), string outputStringType = default(string), byte[] outputBinaryType = default(byte[]))
         {
-            this.Successful = Successful;
-            this.TasksCompleted = TasksCompleted;
-            this.OutputStringType = OutputStringType;
-            this.OutputBinaryType = OutputBinaryType;
+            this.Successful = successful;
+            this.TasksCompleted = tasksCompleted;
+            this.OutputStringType = outputStringType;
+            this.OutputBinaryType = outputBinaryType;
         }
         
         /// <summary>
@@ -93,7 +93,7 @@ namespace Cloudmersive.APIClient.NETCore.ConfigurationAPI.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

@@ -33,14 +33,14 @@ namespace Cloudmersive.APIClient.NETCore.ConfigurationAPI.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UpdateSettingRequest" /> class.
         /// </summary>
-        /// <param name="BucketID">BucketID.</param>
-        /// <param name="BucketSecretKey">BucketSecretKey.</param>
-        /// <param name="SettingToUpdate">SettingToUpdate.</param>
-        public UpdateSettingRequest(string BucketID = default(string), string BucketSecretKey = default(string), SettingValue SettingToUpdate = default(SettingValue))
+        /// <param name="bucketID">bucketID.</param>
+        /// <param name="bucketSecretKey">bucketSecretKey.</param>
+        /// <param name="settingToUpdate">settingToUpdate.</param>
+        public UpdateSettingRequest(string bucketID = default(string), string bucketSecretKey = default(string), SettingValue settingToUpdate = default(SettingValue))
         {
-            this.BucketID = BucketID;
-            this.BucketSecretKey = BucketSecretKey;
-            this.SettingToUpdate = SettingToUpdate;
+            this.BucketID = bucketID;
+            this.BucketSecretKey = bucketSecretKey;
+            this.SettingToUpdate = settingToUpdate;
         }
         
         /// <summary>
@@ -80,7 +80,7 @@ namespace Cloudmersive.APIClient.NETCore.ConfigurationAPI.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

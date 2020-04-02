@@ -33,10 +33,10 @@ namespace Cloudmersive.APIClient.NETCore.ConfigurationAPI.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="HttpOrchestrationRequest" /> class.
         /// </summary>
-        /// <param name="HttpTasks">Tasks to perform, in the order you wish to perform them.</param>
-        public HttpOrchestrationRequest(List<HttpOrchestrationTask> HttpTasks = default(List<HttpOrchestrationTask>))
+        /// <param name="httpTasks">Tasks to perform, in the order you wish to perform them.</param>
+        public HttpOrchestrationRequest(List<HttpOrchestrationTask> httpTasks = default(List<HttpOrchestrationTask>))
         {
-            this.HttpTasks = HttpTasks;
+            this.HttpTasks = httpTasks;
         }
         
         /// <summary>
@@ -63,7 +63,7 @@ namespace Cloudmersive.APIClient.NETCore.ConfigurationAPI.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }
