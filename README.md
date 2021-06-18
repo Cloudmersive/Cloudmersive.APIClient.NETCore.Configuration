@@ -5,7 +5,7 @@ Config API lets you easily manage configuration at scale.
 This C# SDK is for the [Cloudmersive ConfigurationAPI API](https://www.cloudmersive.com/):
 
 - API version: v1
-- SDK version: 2.0.2
+- SDK version: 2.0.3
 - Build package: io.swagger.codegen.languages.CSharpClientCodegen
 
 <a name="frameworks-supported"></a>
